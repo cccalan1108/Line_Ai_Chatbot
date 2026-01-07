@@ -1,4 +1,4 @@
-# Line AI Chatbot 生活小幫手
+# Line AI Chatbot 生活智慧小幫手 - 你的鏈鋸人 Chainsaw Man
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.0-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
@@ -6,15 +6,25 @@
 ![LINE API](https://img.shields.io/badge/LINE-Messaging_API-00C300)
 ![Gemini](https://img.shields.io/badge/AI-Google_Gemini-8E75B2)
 
----
+------------------------------------------------------------------------
 
-## 📖 專案簡介
+#  🔗 快速查看：
+*  Line Link : https://lin.ee/bsv1TCv
+*  Line ID : @467vmfum
+*  Vercel 後台顯示 : https://wp1141-eight-brown.vercel.app
+
+------------------------------------------------------------------------
+
+
+# 📖 專案簡介
 
 這是一個整合 **LINE Messaging API** 與 **Google Gemini AI** 的智慧聊天機器人系統。專案目標是打造一位名為「生活小幫手」的 AI 助理，能透過 LINE 與使用者進行自然對話，提供生活建議、情感支持與實用資訊。
 
 系統採用 **Webhook** 架構接收訊息，透過 **Gemini LLM** 生成結構化回應（包含標題、摘要、建議事項），並以 **LINE Flex Message** 與 **Quick Reply** 呈現豐富的互動介面。所有對話紀錄皆持久化儲存於 **MongoDB**，並提供一個 Web 管理後台供管理員檢視。
 
-## ✨ 核心功能
+------------------------------------------------------------------------
+
+# ✨ 核心功能
 
 ### 🤖 AI 智慧對話
 *   **角色設定**：「生活小幫手」，語氣溫暖、實用導向。
@@ -34,8 +44,10 @@
     *   即時即時監控所有進行中的對話。
     *   查看詳細對話歷史。
     *   支援搜尋與篩選功能（依狀態、關鍵字）。
+   
+------------------------------------------------------------------------
 
-## 🛠️ 技術架構
+# 🛠️ 技術架構
 
 *   **Framework**: Next.js 15+ (App Router)
 *   **Language**: TypeScript
@@ -45,7 +57,9 @@
 *   **Styling**: Tailwind CSS
 *   **Deployment**: Vercel
 
-## 🚀 快速開始
+------------------------------------------------------------------------
+
+# 🚀 快速開始
 
 ### 1. 環境變數設定
 
@@ -88,7 +102,11 @@ ngrok http 3000
 
 將 ngrok 產生的 URL (例如 `https://xxxx.ngrok-free.app/api/webhook`) 填入 LINE Developers Console 的 Webhook URL 欄位。
 
-## 📂 專案結構
+
+------------------------------------------------------------------------
+
+
+# 📂 專案結構
 
 ```
 src/
@@ -105,7 +123,10 @@ src/
 └── ...
 ```
 
-## 🔗 API 端點說明
+------------------------------------------------------------------------
+
+
+# 🔗 API 端點說明
 
 ### `POST /api/webhook`
 *   **用途**：接收 LINE 平台發送的 Webhook 事件。
@@ -121,7 +142,9 @@ src/
 ### `GET /api/conversations/[id]`
 *   **用途**：獲取單一對話的完整歷史訊息。
 
-## 📝 開發者注意事項
+------------------------------------------------------------------------
+
+# 📝 開發者注意事項
 
 1.  **LINE Auto-reply**：請務必在 LINE Official Account Manager 中**關閉**「自動回應訊息」，否則 Webhook 不會生效。
 2.  **Vercel Deployment**：部署到 Vercel 時，請確保在 Project Settings 中設定所有環境變數。
